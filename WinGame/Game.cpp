@@ -89,5 +89,6 @@ int Game::Run(IScene* scene)
 		time = now;
 	}
 
+	delete scene;
 	return 0;
 }

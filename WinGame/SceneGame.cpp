@@ -24,5 +24,5 @@ IScene* SceneGame::Update(InputList& inputs)
 
 void SceneGame::Draw(HDC hdc)
 {
-	TextOut(hdc, 0, 0, L"Game", 5);
+	TextOut(hdc, 0, 0, L"Game", 4);
 }
