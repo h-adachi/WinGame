@@ -49,6 +49,7 @@ LRESULT Game::Proc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
 		HDC hdc = BeginPaint(hwnd, &ps);
 		BitBlt(hdc, ps.rcPaint.left, ps.rcPaint.top, ps.rcPaint.right, ps.rcPaint.bottom, mHdc.GetDC(), ps.rcPaint.left, ps.rcPaint.top, SRCCOPY);
 		EndPaint(hwnd, &ps);
+		return 0;
 	}
 	return DefWindowProc(hwnd, msg, wp, lp);
 }
