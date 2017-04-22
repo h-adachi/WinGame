@@ -7,8 +7,8 @@
 # 対象
 * Windows ユーザー
 * Visutal Studio
-* デバイスコンテキスト(HDC)の知識  
-  https://msdn.microsoft.com/ja-jp/library/cc428272.aspx
+* Windows GDIの知識  
+  https://msdn.microsoft.com/ja-jp/library/cc428835.aspx
   
   
 # 実施している事
