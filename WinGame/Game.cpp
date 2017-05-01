@@ -73,6 +73,7 @@ int Game::Run(IScene* scene)
 
 		// ƒQ[ƒ€ˆ—.
 		mInputs.Update();
+		mHdc.Clear();
 		IScene* next = scene->Update(mInputs);
 		if (scene != next)
 		{

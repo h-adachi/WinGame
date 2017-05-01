@@ -15,13 +15,16 @@ void Hdc::Create(HWND hwnd)
 {
 	HDC hdc = ::GetDC(hwnd);
 	mHdc = CreateCompatibleDC(hdc);
-	RECT rect;
-	GetClientRect(hwnd, &rect);
-	mBmp = CreateCompatibleBitmap(hdc, rect.right, rect.bottom);
+
+	GetClientRect(hwnd, &mRect);
+	mBmp = CreateCompatibleBitmap(hdc, mRect.right, mRect.bottom);
 	DeleteObject(SelectObject(mHdc, mBmp));
 	ReleaseDC(hwnd, hdc);
+}
 
-	FillRect(mHdc, &rect, WHITE_BRUSH);
+void Hdc::Clear()
+{
+	FillRect(mHdc, &mRect, WHITE_BRUSH);
 }
 
 HDC Hdc::GetDC()
